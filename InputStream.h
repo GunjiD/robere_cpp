@@ -2,12 +2,11 @@
 #define INPUTSTREAM_H_
 
 // 入力クラス
-class InputStream {
+#include "Stream.h"
+
+class InputStream : public Stream {
 public:
-  double Get() const; // 入力された値を取得
-  bool Set();         // 入力関数
-private:
-  double m_n; // 入力された値
+  bool Set(); // 入力関数
 };
 
 #endif
