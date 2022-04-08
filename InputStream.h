@@ -5,8 +5,8 @@
 #include "Stream.h"
 
 class InputStream : public Stream {
-public:
-  bool Set(); // 入力関数
+protected:
+  virtual void SetBase(); //値を設定する基本関数
 };
 
 #endif

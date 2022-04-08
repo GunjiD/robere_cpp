@@ -1,8 +1,6 @@
 #include "InputStream.h"
 #include <iostream>
+#include <ostream>
 
 // 入力関数
-bool InputStream::Set() {
-  std::cin >> m_n;
-  return m_n >= 0;
-}
+void InputStream::SetBase() { std::cin >> m_n; }
