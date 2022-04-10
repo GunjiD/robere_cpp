@@ -1,5 +1,9 @@
 #include "Stream.h"
+#include "HalfInputStream.h"
 #include <iostream>
+#include <iterator>
+
+Stream::Stream() : m_n(-1) {}
 
 // 設定された値を取得
 double Stream::Get() const { return m_n; }
@@ -11,7 +15,7 @@ bool Stream::Set() {
 }
 
 // 値を設定する基本関数
-void Stream::SetBase() {
-  std::cout << "Stream::SetBase" << std::endl;
-  m_n = -1;
+void HalfInputStream::SetBase() {
+  InputStream::SetBase();
+  m_n /= 2;
 }
