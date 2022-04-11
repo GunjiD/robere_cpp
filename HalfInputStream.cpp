@@ -1,4 +1,5 @@
 #include "HalfInputStream.h"
+#include "InputStream.h"
 #include <iostream>
 
 // 値を設定する基本関数

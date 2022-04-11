@@ -6,12 +6,15 @@
 // 配列から順に値を取得していくクラス
 class ArrayStream : public Stream {
 public:
-  ArrayStream(const double *array);
-  bool Set(); // 新しい値を設定
+  ArrayStream(const double *array, int size);
+  ~ArrayStream();
+
+protected:
+  virtual void SetBase(); // 値を設定する基本関数
 
 private:
-  const double *m_array; // 配列
-  int m_i;               // 現在のインデックス
+  double *m_array; // 配列
+  int m_i;         // 現在のインデックス
 };
 
 #endif
